@@ -12,6 +12,7 @@ public class LaterApplication {
 
     public static void main(String[] args) throws LifecycleException {
         Tomcat tomcat = new Tomcat();
+        tomcat.setSilent(true);
         tomcat.getConnector().setPort(PORT);
 
         // то самое "приложение" или "контекст" с пустым путём
