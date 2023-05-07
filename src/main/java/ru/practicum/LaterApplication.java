@@ -28,8 +28,8 @@ public class LaterApplication {
         // создаём контекст
         AnnotationConfigWebApplicationContext applicationContext =
                 new AnnotationConfigWebApplicationContext();
-        applicationContext.setServletContext(tomcatContext.getServletContext());
         applicationContext.scan("ru.practicum");
+        applicationContext.setServletContext(tomcatContext.getServletContext());
         applicationContext.refresh();
 
         // добавляем диспетчер запросов
